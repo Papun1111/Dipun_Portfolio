@@ -1,0 +1,67 @@
+.project-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%; /* Ensures it adapts to the parent container */
+  max-width: 400px; /* Limit the maximum width */
+  margin: 0 auto; /* Centers the card */
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.proj-txtx {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  padding: 20px;
+  transition: transform 0.3s ease, bottom 0.3s ease, background-color 0.3s ease;
+  transform: translateY(100%); /* Start below the image (hidden) */
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1); /* Slight zoom-in effect on hover */
+}
+
+.project-card:hover .proj-txtx {
+  transform: translateY(0); /* Slide up the text */
+  bottom: 20px; /* Adjust to how much space you want from the bottom */
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background on hover */
+}
+
+.project-card a {
+  display: block;
+  width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .project-card {
+      max-width: 100%; /* Ensure the card takes full width on smaller screens */
+      margin: 10px; /* Add some space around the card */
+  }
+
+  .proj-txtx {
+      padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .project-card {
+      max-width: 100%; /* Full width on mobile */
+      margin: 10px auto; /* Center the card with some margin */
+  }
+
+  .proj-txtx {
+      padding: 10px; /* Adjust padding further */
+      font-size: 14px; /* Make text smaller on mobile */
+  }
+}

@@ -1,0 +1,50 @@
+:root {
+    --primary-color: #5d93e1; /* A soothing blue */
+    --secondary-color: #ff7675; /* A soft red for contrasts */
+    --background-color: #f9f9f9; /* A light grey background */
+    --text-color: #333; /* Dark text for readability */
+  }
+  
+  .banner {
+    padding: 60px 0;
+    background-color: var(--background-color);
+  }
+  
+  .banner .tagline {
+    color: var(--secondary-color);
+    font-weight: bold;
+  }
+  
+  .banner h1 {
+    color: var(--primary-color);
+    transition: color 0.5s ease;
+  }
+  
+  .banner p {
+    color: var(--text-color);
+  }
+  
+  .banner button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .banner button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+  }
+  
+  .banner img {
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .banner img:hover {
+    transform: scale(1.1);
+  }
+  

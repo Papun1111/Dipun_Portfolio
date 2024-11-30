@@ -1,0 +1,64 @@
+/* General Styles */
+.education-box {
+    margin: 20px auto;
+    max-width: 600px;
+    opacity: 0; /* Start with transparency for animation */
+    animation: fadeIn 1s forwards; /* Fade-in animation */
+  }
+  
+  .education-card {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transitions */
+  }
+  
+  .education-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+  
+  .education-title {
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideIn 0.5s ease-out 0.5s forwards; /* Slide-in animation */
+  }
+  
+  .education-details {
+    font-size: 16px;
+    color: #34495e;
+    opacity: 0;
+    animation: slideIn 0.5s ease-out 1s forwards; /* Slide-in animation for details */
+  }
+  
+  .education-details strong {
+    color: #2980b9;
+  }
+  
+  .education-details em {
+    font-style: italic;
+    color: #7f8c8d;
+  }
+  
+  /* Animation Effects */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  

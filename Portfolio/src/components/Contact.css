@@ -1,0 +1,126 @@
+/* Purple Background and Overall Styling */
+.contact-animate {
+    background-color: transparent; /* Purple-ish background */
+    color: white;
+    padding: 50px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the Contact container */
+.contact-animate:hover {
+    background-color: #36145b; /* Lighter purple when hovered */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading Styles */
+.contact-animate h1 {
+    color: #ff7f00; /* Bright orange for heading */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Subtitle Styling */
+.contact-animate h2 {
+    color: #f0e68c; /* Light yellow */
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Paragraph Text */
+.contact-animate p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f4f4f4;
+}
+
+/* Contact Info Styling */
+.contact-animate .d-flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-animate .d-flex img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.contact-animate .d-flex p {
+    color: #f0e68c;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Focus and Hover Effect for Inputs */
+.form-control:focus {
+    border-color: #ff7f00; /* Orange color when focused */
+    box-shadow: 0 0 5px rgba(255, 127, 0, 0.5);
+}
+
+/* Button Styling */
+.button-gradient {
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Hover Effect for Button */
+.button-gradient:hover {
+    background: linear-gradient(45deg, #2575fc 0%, #6a11cb 100%);
+    transform: scale(1.05);  /* Slight zoom effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);  /* Subtle shadow effect */
+}
+
+/* Add smooth transition effects */
+.contact-animate * {
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .contact-animate {
+        padding: 30px 15px;
+    }
+
+    .contact-animate h1 {
+        font-size: 2rem;
+    }
+
+    .contact-animate h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-control {
+        font-size: 1rem;
+    }
+
+    .button-gradient {
+        width: 100%;
+    }
+}
