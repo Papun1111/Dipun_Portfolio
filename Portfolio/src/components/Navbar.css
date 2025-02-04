@@ -1,0 +1,170 @@
+/* Responsive Navbar Styles */
+nav.navbar {
+    padding: 18px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9999;
+    transition: 0.32s ease-in-out;
+    background-color: #534F54;
+}
+
+nav.navbar.scrolled {
+    padding: 10px 0;
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    align-items: center;
+    margin-left: auto;
+}
+
+.navbar-link {
+    color: #fff !important;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    padding: 0 15px;
+    opacity: 0.75;
+    transition: all 0.3s ease;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+    opacity: 1;
+    color: #007bff !important;
+}
+
+.navbar-text {
+    display: flex;
+    align-items: center;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.social-icon a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.social-icon a:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+.social-icon a img {
+    width: 50%;
+    filter: brightness(0) invert(1);
+}
+
+.navbar-text button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.navbar-text button:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav.navbar {
+        padding: 10px 15px;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #121212;
+        padding: 15px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-link {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .social-icon {
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .navbar-text {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-text button {
+        margin-top: 15px;
+    }
+}
+
+/* Dropdown Specific Styles */
+.dropdown-menu {
+    background-color: #1a1a1a;
+    border: none;
+}
+
+.dropdown-item {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Ensure Toggle Icon is Visible */
+.navbar-toggler-icon {
+    background-image: none;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon::before {
+    transform: translateY(-7px);
+}
+
+.navbar-toggler-icon::after {
+    transform: translateY(5px);
+}

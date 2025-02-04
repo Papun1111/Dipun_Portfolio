@@ -1,89 +1,162 @@
-.project img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover; /* Ensures images are properly scaled */
-}
+/* Projects.css */
 
-.project-card {
-  position: relative;
-  margin-bottom: 30px;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Ensure the card takes up full width of container */
-  max-width: 400px; /* Set a max width for large screens */
-  margin-left: auto; /* Center the card */
-  margin-right: auto; /* Center the card */
-}
-
-.project-card img {
-  width: 100%;
-  height: 300px; /* Fixed height for images */
-  object-fit: cover;
-}
-
-.project-card .card-body {
-  padding: 20px;
-  text-align: center;
-}
-
-.project-card h5 {
-  font-size: 1.5rem; /* Font size for heading */
-  font-weight: bold;
-}
-
-.project-card p {
-  font-size: 1rem; /* Font size for paragraph */
-}
-
-/* Media Queries for Responsiveness */
-
-/* For tablets and smaller screens */
-@media (max-width: 768px) {
+/* Overall container styling for the projects page */
+.projects-page {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 60px 15px;
+  }
+  
+  /* Header title styling */
+  .projects-page h2.display-5 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* ----------------------- */
+  /*  Project Card Styling   */
+  /* ----------------------- */
+  /* If your ProjectCard component uses the .project-card class */
   .project-card {
-      max-width: 100%; /* Make card take full width on smaller screens */
-      margin-left: 10px;
-      margin-right: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
-
-  .project-card img {
-      height: 250px; /* Reduce image height on tablets */
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   }
-
-  .project-card .card-body {
-      padding: 15px; /* Adjust padding for smaller screens */
+  
+  /* ----------------------- */
+  /*  Tab Navigation Styling */
+  /* ----------------------- */
+  .nav-tabs .nav-link {
+    transition: background-color 0.3s, color 0.3s;
+    color: #555;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
   }
-
-  .project-card h5 {
-      font-size: 1.25rem; /* Adjust font size of heading for better readability */
+  .nav-tabs .nav-link:hover,
+  .nav-tabs .nav-link:focus {
+    background-color: #e9ecef;
+    color: #000;
   }
-
-  .project-card p {
-      font-size: 0.9rem; /* Adjust font size of paragraph for better readability */
+  .nav-tabs .nav-link.active {
+    background-color: #fff;
+    border-color: #0d6efd;
+    color: #0d6efd;
+    font-weight: 600;
   }
-}
-
-/* For mobile phones */
-@media (max-width: 480px) {
-  .project-card {
-      max-width: 100%; /* Full width on mobile */
-      margin-left: 5px;
-      margin-right: 5px;
+  
+  /* ----------------------- */
+  /*  Project Section Styling*/
+  /* ----------------------- */
+  .project-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
   }
-
-  .project-card img {
-      height: 200px; /* Reduce image height further for small screens */
+  .project-section:hover {
+    transform: scale(1.02);
   }
-
-  .project-card .card-body {
-      padding: 10px; /* Further reduce padding for small screens */
+  
+  /* Section title styling */
+  .section-title {
+    border-bottom: 2px solid #0d6efd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #0d6efd;
+    font-size: 1.5rem;
   }
-
-  .project-card h5 {
-      font-size: 1rem; /* Further reduce font size of heading */
+  
+  /* ----------------------- */
+  /*  Image Styling          */
+  /* ----------------------- */
+  /* Make images smaller in size and add a subtle hover scale */
+  .project-section img,
+  .model-card img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px; /* Limits image height */
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
   }
-
-  .project-card p {
-      font-size: 0.85rem; /* Further reduce font size of paragraph */
+  .project-section img:hover,
+  .model-card img:hover {
+    transform: scale(1.05);
   }
-}
+  
+  /* ----------------------- */
+  /*  Model Card Styling     */
+  /* ----------------------- */
+  .model-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  .model-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  .model-card h5 {
+    margin-bottom: 10px;
+    color: #0d6efd;
+  }
+  
+  /* ----------------------- */
+  /*  Timeline Styling       */
+  /* ----------------------- */
+  .timeline {
+    border-left: 3px solid #0d6efd;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  .timeline-phase {
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  .timeline-phase::before {
+    content: "";
+    position: absolute;
+    left: -11px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+  }
+  
+  /* ----------------------- */
+  /*  Recursive Content Styling  */
+  /* ----------------------- */
+  .content-section {
+    margin-bottom: 20px;
+  }
+  .content-section h5 {
+    margin-bottom: 10px;
+    color: #0d6efd;
+  }
+  
+  /* ----------------------- */
+  /*  Responsive Adjustments */
+  /* ----------------------- */
+  @media (max-width: 768px) {
+    .project-section {
+      padding: 20px;
+    }
+    .timeline {
+      padding-left: 15px;
+    }
+  }
+  
