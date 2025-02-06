@@ -21,14 +21,7 @@ export const ProjectCard = ({ project }) => {
 
   return (
     <Card className="project-card h-100 shadow">
-      {thumbnail && (
-        <Card.Img
-          variant="top"
-          src={thumbnail}
-          alt={`${project.title} thumbnail`}
-          className="img-fluid"
-        />
-      )}
+      
       <Card.Body>
         <Card.Title className="text-primary">{project.title}</Card.Title>
         {project.timeline ? (
